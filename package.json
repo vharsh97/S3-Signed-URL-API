@@ -1,7 +1,7 @@
 {
-  "name": "smartsync_s3_api",
+  "name": "smartsync_aws_s3_api",
   "version": "1.0.0",
-  "description": "API to get presigned S3 url",
+  "description": "API to generate presigned S3 url to be used by Zoom Smart Sync Application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
