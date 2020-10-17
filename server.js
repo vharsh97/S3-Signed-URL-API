@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 const url = require('url');
 const port = process.env.PORT || 3200;
 
-// app setup
+// run this api appliation on the above specified port and log out on console.
 server.listen(port, () => {
   console.log(`running at port ${port}`);
 });
@@ -24,6 +24,7 @@ AWS.config.update({
 
 var presignedGETURL;
 
+// this is the getSignedUrl api endpoint which receives the filename and returns back the signed url
 server.get('/getSignedUrl', function(req, res) {
   try {
     const reqUrl = url.parse(req.url, true);
