@@ -29,8 +29,8 @@ server.get('/getSignedUrl', function(req, res) {
     const reqUrl = url.parse(req.url, true);
 		let bucektParams = {
 			Bucket: 'bucketname'
-      Key: reqUrl.query.name,
-      Expires: 60*60 ,
+      Key: reqUrl.query.name,       //Parse the file name from URL
+      Expires: 60*60 ,		//Time of expiry of signed URL
       ACL: 'bucket-owner-full-control'
 		}
 		var s3 = new AWS.S3();
